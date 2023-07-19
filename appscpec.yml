@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/web_app
+hooks:
+  ApplicationStop:
+    - location: scripts/nada.sh
+      timeout: 300
+      runas: root
+  BeforeInstall:
+    - location: scripts/nada.sh
+      timeout: 300
+      runas: root
