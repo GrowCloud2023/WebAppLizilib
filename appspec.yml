@@ -5,10 +5,10 @@ files:
     destination: /home/ubuntu/web_app
 hooks:
   ApplicationStop:
-    - location: scripts/nada.sh
+    - location: scripts/stop.sh
       timeout: 300
       runas: root
   BeforeInstall:
-    - location: scripts/nada.sh
+    - location: scripts/start.sh
       timeout: 300
       runas: root
