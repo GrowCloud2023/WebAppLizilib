@@ -1,18 +1,19 @@
 import React from "react";
 import Steps from "../components/Steps";
 import { Link } from "react-router-dom";
+import RegisterLayout from "../layouts/RegisterLayout";
 
 const RegisterStep3 = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <Steps step3 />
+    <RegisterLayout>
       <div className="mt-3">
-        <h1 className="text-gray-700 text-3xl font-medium tracking-widest">
+        <h1 className="text-[#6EC63B] text-3xl font-medium tracking-widest">
           Lizilib
         </h1>
       </div>
-      <div className="p-8">
-        <div className="p-8">
+      <Steps step3 />
+      <div className="p-8 rounded-2xl bg-white shadow-2xl mb-2">
+        <div className="p-8 ">
           <h3 className="text-gray-500 uppercase text-sm font-bold mb-2">
             Empieza gratis
           </h3>
@@ -28,27 +29,27 @@ const RegisterStep3 = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 p-8">
               <div>
-                <button className="block w-11/12 text-center text-2xl border border-[#6EC63B] rounded-full text-green-600 p-6 shadow-xl transition-all duration-500 hover:border-[#6EC63B]/50 hover:shadow-[#6EC63B]/50">
+                <button className="block w-11/12 bg-white text-center text-2xl border border-[#6EC63B] rounded-full text-green-600 p-6 shadow-xl transition-all duration-500 hover:border-[#6EC63B]/50 hover:shadow-[#6EC63B]/50">
                   Educación
                 </button>
               </div>
               <div>
-                <button className="block w-11/12 text-center text-2xl border border-[#6EC63B] rounded-full text-green-600 p-6 shadow-xl transition-all duration-500 hover:border-[#6EC63B]/50 hover:shadow-[#6EC63B]/50">
+                <button className="block w-11/12 bg-white text-center text-2xl border border-[#6EC63B] rounded-full text-green-600 p-6 shadow-xl transition-all duration-500 hover:border-[#6EC63B]/50 hover:shadow-[#6EC63B]/50">
                   Softwares
                 </button>
               </div>
               <div>
-                <button className="block w-11/12 text-center text-2xl border border-[#6EC63B] rounded-full text-green-600 p-6 shadow-xl transition-all duration-500 hover:border-[#6EC63B]/50 hover:shadow-[#6EC63B]/50">
+                <button className="block w-11/12 bg-white text-center text-2xl border border-[#6EC63B] rounded-full text-green-600 p-6 shadow-xl transition-all duration-500 hover:border-[#6EC63B]/50 hover:shadow-[#6EC63B]/50">
                   Construcción
                 </button>
               </div>
               <div>
-                <button className="block w-11/12 text-center text-2xl border border-[#6EC63B] rounded-full text-green-600 p-6 shadow-xl transition-all duration-500 hover:border-[#6EC63B]/50 hover:shadow-[#6EC63B]/50">
+                <button className="block w-11/12 bg-white text-center text-2xl border border-[#6EC63B] rounded-full text-green-600 p-6 shadow-xl transition-all duration-500 hover:border-[#6EC63B]/50 hover:shadow-[#6EC63B]/50">
                   Salud
                 </button>
               </div>
               <div>
-                <button className="block w-11/12 text-center text-2xl border border-[#6EC63B] rounded-full text-green-600 p-6 shadow-xl transition-all duration-500 hover:border-[#6EC63B]/50 hover:shadow-[#6EC63B]/50">
+                <button className="block w-11/12 bg-white text-center text-2xl border border-[#6EC63B] rounded-full text-green-600 p-6 shadow-xl transition-all duration-500 hover:border-[#6EC63B]/50 hover:shadow-[#6EC63B]/50">
                   Ventas
                 </button>
               </div>
@@ -63,7 +64,7 @@ const RegisterStep3 = () => {
           </form>
         </div>
       </div>
-    </div>
+    </RegisterLayout>
   );
 };
 

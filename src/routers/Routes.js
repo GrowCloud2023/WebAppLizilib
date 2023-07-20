@@ -5,6 +5,7 @@ import Login from "../views/Login";
 import Register from "../views/Register";
 import RegisterStep2 from "../views/RegisterStep2";
 import RegisterStep3 from "../views/RegisterStep3";
+import NotFound from "../components/NotFound";
 
 function RoutesApp() {
   return (
@@ -16,6 +17,7 @@ function RoutesApp() {
           <Route path="/register" element={<Register />} />
           <Route path="/register/2" element={<RegisterStep2 />} />
           <Route path="/register/3" element={<RegisterStep3 />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </Router>
     </Suspense>

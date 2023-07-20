@@ -1,18 +1,19 @@
 import React from "react";
 import Steps from "../components/Steps";
 import { Link } from "react-router-dom";
+import RegisterLayout from "../layouts/RegisterLayout";
 
 const Register = () => {
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen">
-        <Steps step1 />
-        <div className="mt-3">
-          <h1 className="text-gray-700 text-3xl font-medium tracking-widest">
+      <RegisterLayout>
+        <div className="mt-3 ">
+          <h1 className="text-[#6EC63B] text-3xl font-medium tracking-widest">
             Lizilib
           </h1>
         </div>
-        <div className="max-w-lg w-full p-8">
+          <Steps step1 />
+        <div className="max-w-lg w-full p-8 rounded-2xl bg-white shadow-2xl lg:p-12 mb-2">
           <h3 className="text-gray-500 uppercase text-sm font-bold mb-2">
             Empieza gratis
           </h3>
@@ -94,7 +95,7 @@ const Register = () => {
             </Link>
           </form>
         </div>
-      </div>
+      </RegisterLayout>
     </>
   );
 };
