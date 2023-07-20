@@ -1,13 +1,22 @@
 import React from "react";
+import Sidebar from "../components/Header/Sidebar";
 
 const MainLayout = ({ children }) => {
   return (
-    <div className="min-h-screen grid lg:grid-cols-8 gap-4">
-      sidebar
-      <div className="lg:col-span-7 px-4 h-full">
-        navbar
-        <main className="rounded-xl h-[90vh] overflow-y-scroll">
-          {children}
+    <div className="flex h-full w-full">
+      <Sidebar />
+      <div className="h-full w-full bg-gray-100">
+        <main
+          className={`mx-[12px] h-full flex-none transition-all md:pe-2 xl:mr-[313px] `}
+        >
+          <div className="h-full">
+            Navbar
+            <div className="pt-5s mx-auto mb-auto h-full min-h-[84vh] p-2 md:pr-2">
+              CONTENIDO
+              {children}
+            </div>
+            <div className="p-3">Footer</div>
+          </div>
         </main>
       </div>
     </div>

@@ -38,7 +38,7 @@ const Steps = ({ step1, step2, step3 }) => {
           ) : (
             <li className="flex items-center gap-2 p-2">
               <span className="h-6 w-6 rounded-full bg-gray-100 text-center text-[10px]/6 font-bold">
-                3
+                2
               </span>
               <span className="hidden sm:block"> Información empresarial </span>
             </li>
@@ -48,7 +48,7 @@ const Steps = ({ step1, step2, step3 }) => {
             <Link to="/register/3">
               <li className="flex items-center gap-2 p-2">
                 <span className="h-6 w-6 rounded-full bg-[#6EC63B] text-white text-center text-[10px]/6 font-bold">
-                  2
+                  3
                 </span>
                 <span className="hidden sm:block"> Personalización </span>
               </li>

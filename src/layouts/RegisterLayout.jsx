@@ -2,7 +2,7 @@ import React from "react";
 
 const RegisterLayout = ({ children }) => {
   return (
-    <div className="register flex flex-col items-center justify-center min-h-screen">
+    <div className="register flex flex-col min-h-screen rounded-lg md:p-8"> 
       {children}
     </div>
   );

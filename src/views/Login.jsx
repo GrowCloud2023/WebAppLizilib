@@ -7,7 +7,7 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="max-w-lg">
         <div className="flex justify-center mb-8">
-          <h1 className="text-6xl font-bold text-[#6EC63B]">LIZILIB</h1>
+          <h1 className="text-6xl font-bold text-primary">LIZILIB</h1>
         </div>
         <h1 className="text-3xl text-gray-900 mb-8 flex justify-center">
           Inicia sesión en tu cuenta
@@ -25,7 +25,7 @@ const Login = () => {
                 className="w-full border py-2 px-10 rounded-md outline-none"
                 placeholder="Ingresa tu correo"
               />
-              <BsEnvelope className="w-5 h-5 absolute left-2 top-[50%] -translate-y-[50%] text-[#6EC63B]" />
+              <BsEnvelope className="w-5 h-5 absolute left-2 top-[50%] -translate-y-[50%] text-primary" />
             </div>
             <div className="relative">
               <input
@@ -33,13 +33,13 @@ const Login = () => {
                 className="w-full border py-2 px-10 rounded-md outline-none"
                 placeholder="Ingresa tu contraseña"
               />
-              <BsLock className="w-5 h-5 absolute left-2 top-[50%] -translate-y-[50%] text-[#6EC63B]" />
+              <BsLock className="w-5 h-5 absolute left-2 top-[50%] -translate-y-[50%] text-primary" />
             </div>
             <div>
               <Link to="/">
                 <button
                   type="submit"
-                  className="w-full bg-[#6EC63B] py-2 px-4 text-white rounded-md hover:bg-green-600 transition-all duration-500"
+                  className="w-full bg-primary py-2 px-4 text-white rounded-md hover:bg-green-600 transition-all duration-500"
                 >
                   Iniciar sesión
                 </button>
@@ -49,7 +49,7 @@ const Login = () => {
               ¿Olvidaste tu contraseña?{" "}
               <a
                 href="#"
-                className="text-[#6EC63B] hover:text-green-600  transition-all duration-500"
+                className="text-primary hover:text-green-600  transition-all duration-500"
               >
                 Recuperar
               </a>
@@ -84,7 +84,7 @@ const Login = () => {
             ¿No tienes cuenta?{" "}
             <Link
               to="/register"
-              className="text-[#6EC63B] hover:text-green-600  transition-all duration-500"
+              className="text-primary hover:text-green-600  transition-all duration-500"
             >
               Registrate
             </Link>
