@@ -1,0 +1,58 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-webapplizilib-dev-185624-authRole",
+      "UnauthRoleArn": "arn:aws:iam::751934134052:role/amplify-webapplizilib-dev-185624-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::751934134052:role/amplify-webapplizilib-dev-185624-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-webapplizilib-dev-185624-deployment",
+      "UnauthRoleName": "amplify-webapplizilib-dev-185624-unauthRole",
+      "StackName": "amplify-webapplizilib-dev-185624",
+      "StackId": "arn:aws:cloudformation:us-east-1:751934134052:stack/amplify-webapplizilib-dev-185624/f260d5f0-2819-11ee-bbbe-12b99d9b1b71",
+      "AmplifyAppId": "d1f6uv2ywndwho"
+    }
+  },
+  "auth": {
+    "webapplizilib104e356a": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-webapplizilib-dev-185624-deployment/amplify-cfn-templates/auth/webapplizilib104e356a-cloudformation-template.json",
+        "logicalId": "authwebapplizilib104e356a"
+      },
+      "lastPushTimeStamp": "2023-07-21T23:00:57.869Z",
+      "output": {
+        "UserPoolId": "us-east-1_BSc9pea7t",
+        "AppClientIDWeb": "72a1mr4u3kqc2ai8tamgq1hlii",
+        "AppClientID": "3cjr0gg477gpcnbslni5nbk56u",
+        "IdentityPoolId": "us-east-1:aa5ddd21-a331-45e0-8b8f-2ce0600aadb5",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:751934134052:userpool/us-east-1_BSc9pea7t",
+        "IdentityPoolName": "webapplizilib104e356a_identitypool_104e356a__dev",
+        "UserPoolName": "webapplizilib104e356a_userpool_104e356a"
+      },
+      "lastPushDirHash": "FuM4/+A6pZOBXzi07bmMWAkZ5sM="
+    }
+  }
+}
