@@ -1,24 +1,8 @@
+import React from "react";
+import RoutesApp from "./routers/Routes";
 
-import "@aws-amplify/ui-react/styles.css";
-import {
-  withAuthenticator,
-  Button,
-  Heading,
-  Image,
-  View,
-  Card,
-} from "@aws-amplify/ui-react";
-
-function App({ signOut }) {
-  return (
-    <View className="App">
-      <Card>
-        <Image className="App-logo" alt="logo" />
-        <Heading level={1}>We now have Auth!</Heading>
-      </Card>
-      <Button onClick={signOut}>Sign Out</Button>
-    </View>
-  );
+function App() {
+  return <RoutesApp />;
 }
 
-export default withAuthenticator(App);
+export default App;
