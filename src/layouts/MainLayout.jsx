@@ -1,23 +1,52 @@
-import React from "react";
-import Sidebar from "../components/Header/Sidebar";
+import { useState, useEffect, Fragment } from "react";
+import SideBar from "../components/Header/Sidebar";
+import Navbar from "../components/Header/Navbar";
+import { Transition } from "@headlessui/react";
 
 const MainLayout = ({ children }) => {
+  const [showNav, setShowNav] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  function handleResize() {
+    if (window.innerWidth <= 640) {
+      setShowNav(false);
+      setIsMobile(true);
+    } else {
+      setShowNav(true);
+      setIsMobile(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div className="flex h-full w-full">
-      <Sidebar />
-      <div className="h-full w-full bg-gray-100">
-        <main className="mx-[12px] h-full flex-none transition-all md:pe-2 xl:mr-[313px]">
-          <div className="h-full">
-            Navbar
-            <div className="pt-5s mx-auto mb-auto h-full min-h-[84vh] p-2 md:pr-2">
-              CONTENIDO
-              {children}
-            </div>
-            <div className="p-3">Footer</div>
-          </div>
-        </main>
-      </div>
-    </div>
+    <>
+      <Navbar showNav={showNav} setShowNav={setShowNav} />
+      <Transition
+        as={Fragment}
+        show={showNav}
+        enter="transform transition duration-[400ms]"
+        enterFrom="-translate-x-full"
+        enterTo="translate-x-0"
+        leave="transform duration-[400ms] transition ease-in-out"
+        leaveFrom="translate-x-0"
+        leaveTo="-translate-x-full"
+      >
+        <SideBar showNav={showNav} />
+      </Transition>
+      <main
+        className={`pt-24 transition-all duration-[400ms] bg-[#F3F3F3] ${
+          showNav && !isMobile ? "pl-56" : ""
+        }`}
+      >
+        <div className="px-4 md:px-16">{children}</div>
+      </main>
+    </>
   );
 };
 
