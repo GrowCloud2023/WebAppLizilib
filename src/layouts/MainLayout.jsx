@@ -40,7 +40,7 @@ const MainLayout = ({ children }) => {
         <SideBar showNav={showNav} />
       </Transition>
       <main
-        className={`pt-24 transition-all duration-[400ms] bg-[#F3F3F3] ${
+        className={`pt-24 pb-10 transition-all duration-[400ms] bg-[#F3F3F3] ${
           showNav && !isMobile ? "pl-56" : ""
         }`}
       >
