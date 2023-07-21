@@ -9,27 +9,33 @@ const Steps = ({ step1, step2, step3 }) => {
           {step1 ? (
             <Link to="/register">
               <li className="flex items-center gap-2 p-2">
-                <span className="h-6 w-6 rounded-full bg-[#6EC63B] text-white text-center text-[10px]/6 font-bold">
+                <span className="h-6 w-6 rounded-full bg-primary text-secondary text-center text-[10px]/6 font-bold">
                   1
                 </span>
-                <span className="hidden sm:block"> Información personal </span>
+                <span className="hidden sm:block text-tertiary">
+                  {" "}
+                  Información personal{" "}
+                </span>
               </li>
             </Link>
           ) : (
             <li className="flex items-center gap-2 p-2">
-              <span className="h-6 w-6 rounded-full bg-gray-100 text-center text-[10px]/6 font-bold">
+              <span className="h-6 w-6 rounded-full bg-gray-200 text-center text-[10px]/6 font-bold">
                 1
               </span>
-              <span className="hidden sm:block"> Información personal </span>
+              <span className="hidden sm:block text-tertiary">
+                {" "}
+                Información personal{" "}
+              </span>
             </li>
           )}
           {step2 ? (
             <Link to="/register/2">
               <li className="flex items-center gap-2 p-2">
-                <span className="h-6 w-6 rounded-full bg-[#6EC63B] text-center text-[10px]/6 font-bold text-white">
+                <span className="h-6 w-6 rounded-full bg-primary text-center text-[10px]/6 font-bold text-secondary">
                   2
                 </span>
-                <span className="hidden sm:block">
+                <span className="hidden sm:block text-tertiary">
                   {" "}
                   Información empresarial{" "}
                 </span>
@@ -37,28 +43,37 @@ const Steps = ({ step1, step2, step3 }) => {
             </Link>
           ) : (
             <li className="flex items-center gap-2 p-2">
-              <span className="h-6 w-6 rounded-full bg-gray-100 text-center text-[10px]/6 font-bold">
+              <span className="h-6 w-6 rounded-full bg-gray-200 text-center text-[10px]/6 font-bold">
                 2
               </span>
-              <span className="hidden sm:block"> Información empresarial </span>
+              <span className="hidden sm:block text-tertiary">
+                {" "}
+                Información empresarial{" "}
+              </span>
             </li>
           )}
 
           {step3 ? (
             <Link to="/register/3">
               <li className="flex items-center gap-2 p-2">
-                <span className="h-6 w-6 rounded-full bg-[#6EC63B] text-white text-center text-[10px]/6 font-bold">
+                <span className="h-6 w-6 rounded-full bg-primary text-secondary text-center text-[10px]/6 font-bold">
                   3
                 </span>
-                <span className="hidden sm:block"> Personalización </span>
+                <span className="hidden sm:block text-tertiary">
+                  {" "}
+                  Personalización{" "}
+                </span>
               </li>
             </Link>
           ) : (
             <li className="flex items-center gap-2 p-2">
-              <span className="h-6 w-6 rounded-full bg-gray-100 text-center text-[10px]/6 font-bold">
+              <span className="h-6 w-6 rounded-full bg-gray-200 text-center text-[10px]/6 font-bold">
                 3
               </span>
-              <span className="hidden sm:block"> Personalización </span>
+              <span className="hidden sm:block text-tertiary">
+                {" "}
+                Personalización{" "}
+              </span>
             </li>
           )}
         </ol>

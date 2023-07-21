@@ -6,68 +6,65 @@ import { Link } from "react-router-dom";
 const RegisterStep2 = () => {
   return (
     <RegisterLayout>
-      <Steps step2 />
-      <div style={{ maxWidth: "600px", margin: "0 auto" }} className="min-h-screen">
-        <div className="mt-3 mb-2">
-          <h1 className="text-primary text-3xl font-medium tracking-widest">
+      <div className="flex flex-col items-center justify-center">
+        <div className="my-8">
+          <h1 className="text-primary text-3xl font-medium tracking-widest mb-3">
             Lizilib
           </h1>
         </div>
-        <div className="p-8 rounded-2xl bg-white shadow-2xl lg:p-12 mb-2">
-          <h1 className="text-6xl text-gray-700 font-medium mb-2">
+        <Steps step2 />
+        <div className="flex flex-col items-center gap-8 mb-8">
+          <h1 className="text-6xl text-tertiary font-medium">
             Comencemos<span className="text-primary">.</span>
           </h1>
-          <form className="mt-8">
-            <div className="mb-4">
-              <span className="text-gray-500 font-medium">
-                Cuentanos sobre tu empresa
-              </span>
-            </div>
-            <div className="max-w-lg mb-4 flex flex-col md:flex-row items-center justify-between gap-4">
+        </div>
+        <div className="w-full mb-2">
+          <form>
+            <div className="flex justify-center mb-4">
               <input
                 type="text"
-                autoComplete="off"
-                className="w-full py-3 px-4 rounded-xl outline-none bg-gray-100 text-[#343434] group"
+                className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-tertiary"
                 placeholder="Nombre legal"
               />
+            </div>
+            <div className="flex justify-center mb-4">
               <input
                 type="text"
-                autoComplete="off"
-                className="w-full py-3 px-4 rounded-xl outline-none bg-gray-100 text-[#343434] group"
+                className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-tertiary"
                 placeholder="Nombre de fantasía"
               />
             </div>
-            <div className="max-w-lg mb-4">
+            <div className="flex justify-center mb-4">
               <input
                 type="text"
-                autoComplete="off"
-                className="w-full py-3 px-4 rounded-xl outline-none bg-gray-100 text-[#343434] group"
+                className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-tertiary"
                 placeholder="Rut"
               />
             </div>
-            <div className="max-w-lg mb-4">
+            <div className="flex justify-center mb-4">
               <input
                 type="email"
-                autoComplete="off"
-                className="w-full py-3 px-4 rounded-xl outline-none bg-gray-100 text-[#343434] group"
-                placeholder="Email institucional"
+                className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-tertiary"
+                placeholder="Correo electrónico institucional"
               />
             </div>
-            <div className="max-w-lg mb-4">
+            <div className="flex justify-center mb-4">
               <input
                 type="text"
-                autoComplete="off"
-                className="w-full py-3 px-4 rounded-xl outline-none bg-gray-100 text-[#343434] group"
+                className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-tertiary"
                 placeholder="Telefono"
               />
             </div>
-            <Link to="/register/3">
-              <div className="max-w-lg">
-                <button className="bg-primary text-white w-full py-3 px-4 rounded-full hover:bg-green-600 transition-all duration-500">
+            <div className="w-full max-w-sm mx-auto">
+              <Link to="/register/3">
+                <button
+                  type="submit"
+                  className="w-full bg-primary py-2 px-4 rounded-lg text-secondary hover:bg-tertiary transition-all duration-500"
+                >
                   Siguiente
                 </button>
-              </div>
-            </Link>
+              </Link>
+            </div>
           </form>
         </div>
       </div>
