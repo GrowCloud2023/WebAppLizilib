@@ -1,22 +1,19 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-webapplizibil-dev-115045-authRole",
-      "UnauthRoleArn": "arn:aws:iam::751934134052:role/amplify-webapplizibil-dev-115045-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::751934134052:role/amplify-webapplizibil-dev-115045-authRole",
+      "AuthRoleName": "amplify-lizilib2023-dev-184040-authRole",
+      "UnauthRoleArn": "arn:aws:iam::751934134052:role/amplify-lizilib2023-dev-184040-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::751934134052:role/amplify-lizilib2023-dev-184040-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-webapplizibil-dev-115045-deployment",
-      "UnauthRoleName": "amplify-webapplizibil-dev-115045-unauthRole",
-      "StackName": "amplify-webapplizibil-dev-115045",
-      "StackId": "arn:aws:cloudformation:us-east-1:751934134052:stack/amplify-webapplizibil-dev-115045/67270ee0-27de-11ee-b737-0e0de7294027",
-      "AmplifyAppId": "d2exr7p5wop4ta"
+      "DeploymentBucketName": "amplify-lizilib2023-dev-184040-deployment",
+      "UnauthRoleName": "amplify-lizilib2023-dev-184040-unauthRole",
+      "StackName": "amplify-lizilib2023-dev-184040",
+      "StackId": "arn:aws:cloudformation:us-east-1:751934134052:stack/amplify-lizilib2023-dev-184040/a084a330-2817-11ee-99f7-0eb741e870ed",
+      "AmplifyAppId": "dhkaxls0xt657"
     },
     "categories": {
       "auth": {
-        "webapplizibil3bb64f7c": {}
-      },
-      "function": {
-        "webapplizibil8ddc8a99": {}
+        "lizilib202324de03a8": {}
       }
     }
   }
