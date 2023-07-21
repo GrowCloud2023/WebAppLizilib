@@ -1,8 +1,40 @@
 import React from "react";
-import RoutesApp from "./routers/Routes";
-
+import { Amplify } from 'aws-amplify';
+import { Authenticator, View, Image, useTheme } from '@aws-amplify/ui-react';
+import awsExports from './aws-exports';
+import RoutesApp from './routers/Routes';
+import '@aws-amplify/ui-react/styles.css';
+Amplify.configure(awsExports)
 function App() {
-  return <RoutesApp />;
+  const components = {
+    Header() {
+      const { tokens } = useTheme();
+      return (
+        <View textAlign="center" padding={tokens.space.large}>
+          <Image
+            alt='Ejemplo'
+          />
+        </View>
+      )
+    }
+  };
+  return (
+    <Authenticator components={components}>
+      {({ signOut, user }) => (
+        <div>
+          <RoutesApp />
+        </div>
+      )}
+    </Authenticator>
+  );
 }
-
 export default App;
+
+
+
+
+
+
+
+
+
