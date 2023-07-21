@@ -1,101 +1,93 @@
 import React from "react";
 import Steps from "../components/Steps";
 import { Link } from "react-router-dom";
+import RegisterLayout from "../layouts/RegisterLayout";
 
 const Register = () => {
   return (
     <>
-      <div className="register flex flex-col min-h-screen rounded-lg md:p-8">
-        <div className="p-8">
-          <h1 className="text-primary text-3xl font-medium tracking-widest mb-3">
-            Lizilib
-          </h1>
+      <RegisterLayout>
+        <div className="flex flex-col items-center justify-cente">
+          <div className="my-8">
+            <h1 className="text-primary text-3xl font-medium tracking-widest mb-3">
+              Lizilib
+            </h1>
+          </div>
           <Steps step1 />
-        </div>
-        <div className="p-8">
-          <h3 className="text-gray-500 uppercase text-sm font-bold mb-2">
-            Empieza gratis
-          </h3>
-          <h1 className="text-6xl text-white font-medium mb-2">
-            Comencemos<span className="text-primary">.</span>
-          </h1>
-          <span className="text-gray-500 font-medium">
-            ¿Ya eres usuario?{" "}
-            <a href="#" className="text-primary hover:underline">
-              Ingresa
-            </a>
-          </span>
-          <form>
-            <div className="max-w-lg mb-4 flex flex-col md:flex-row items-center justify-between gap-4">
-              <input
-                type="text"
-                autoComplete="off"
-                className="w-full py-3 px-4 rounded-xl outline-none bg-text-gray-100 text-[#343434] group"
-                placeholder="Nombre(s)"
-              />
-              <input
-                type="text"
-                autoComplete="off"
-                className="w-full py-3 px-4 rounded-xl outline-none bg-text-gray-100 text-[#343434] group"
-                placeholder="Apellidos"
-              />
-            </div>
-            <div className="max-w-lg mb-4 flex flex-col md:flex-row items-center justify-between gap-4">
-              <input
-                type="text"
-                autoComplete="off"
-                className="w-full py-3 px-4 rounded-xl outline-none bg-text-gray-100 text-[#343434] group"
-                placeholder="Rut"
-              />
-              <input
-                type="email"
-                autoComplete="off"
-                className="w-full py-3 px-4 rounded-xl outline-none bg-text-gray-100 text-[#343434] group"
-                placeholder="Email"
-              />
-            </div>
-            <div className="max-w-lg mb-4">
-              <input
-                type="text"
-                autoComplete="off"
-                className="w-full py-3 px-4 rounded-xl outline-none bg-text-gray-100 text-[#343434] group"
-                placeholder="Telefono"
-              />
-            </div>
-            <div className="max-w-lg mb-4">
-              <input
-                type="password"
-                autoComplete="off"
-                className="w-full py-3 px-4 rounded-xl outline-none bg-text-gray-100 text-[#343434] group"
-                placeholder="Contraseña"
-              />
-            </div>
-            <div className="max-w-lg mb-4">
-              <input
-                type="password"
-                autoComplete="off"
-                className="w-full py-3 px-4 rounded-xl outline-none bg-text-gray-100 text-[#343434] group"
-                placeholder="Repetir contraseña"
-              />
-            </div>
-            <div className="max-w-lg flex justify-center md:justify-end mb-6">
-              <a
-                href="#"
-                className="text-primary font-medium hover:text-green-600 transition-all duration-500"
-              >
-                ¿Olvidaste tu contraseña?
+          <div className="flex flex-col items-center gap-8">
+            <h1 className="text-6xl text-tertiary font-medium">
+              Comencemos<span className="text-primary">.</span>
+            </h1>
+            <span className="text-tertiary font-medium mb-2">
+              ¿Ya eres usuario?{" "}
+              <a href="#" className="text-primary hover:underline">
+                Ingresa
               </a>
-            </div>
-            <div className="max-w-lg">
-              <Link to="/register/2">
-                <button className="bg-primary text-white w-full py-3 px-4 rounded-full hover:bg-green-700 transition-all duration-500">
-                  Siguiente
-                </button>
-              </Link>
-            </div>
-          </form>
+            </span>
+          </div>
+          <div className="w-full mb-2">
+            <form>
+              <div className="flex justify-center mb-2">
+                <input
+                  type="text"
+                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-tertiary"
+                  placeholder="Nombre completo"
+                />
+              </div>
+              <div className="flex justify-center mb-2">
+                <input
+                  type="text"
+                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-tertiary"
+                  placeholder="Rut"
+                />
+              </div>
+              <div className="flex justify-center mb-2">
+                <input
+                  type="email"
+                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-tertiary"
+                  placeholder="Correo electrónico"
+                />
+              </div>
+              <div className="flex justify-center mb-2">
+                <input
+                  type="text"
+                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-tertiary"
+                  placeholder="Telefono"
+                />
+              </div>
+              <div className="flex justify-center mb-2">
+                <input
+                  type="password"
+                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-tertiary"
+                  placeholder="Contraseña"
+                />
+              </div>
+              <div className="flex justify-center mb-2">
+                <input
+                  type="password"
+                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-tertiary"
+                  placeholder="Repetir contraseña"
+                />
+              </div>
+              <div className="w-full max-w-sm mx-auto flex justify-end items-center text-primary mb-8">
+                <a href="#" className="hover:underline transition-all">
+                  ¿Olvidaste tu password?
+                </a>
+              </div>
+              <div className="w-full max-w-sm mx-auto">
+                <Link to="/register/2">
+                  <button
+                    type="submit"
+                    className="w-full bg-primary py-2 px-4 rounded-lg text-white hover:bg-tertiary transition-all duration-500"
+                  >
+                    Siguiente
+                  </button>
+                </Link>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
+      </RegisterLayout>
     </>
   );
 };
