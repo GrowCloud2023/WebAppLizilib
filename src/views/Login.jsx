@@ -14,8 +14,11 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await Auth.signIn(email, password);
-      toast.success("Bienvenido :)!");
+      setTimeout(() => {
+        toast.success("Se ha iniciado sesión correctamente");
+      }, 1000);
       navigate("/dashboard");
+      toast.success("Bienvenido :)!");
     } catch (error) {
       console.log("Error al iniciar sesión:", error);
       toast.error("Oh:(, ha ocurrido un error al iniciar sesión", error);
