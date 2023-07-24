@@ -7,7 +7,7 @@ const Register = () => {
   return (
     <>
       <RegisterLayout>
-        <div className="flex flex-col items-center justify-cente">
+        <div className="flex flex-col items-center">
           <div className="my-8">
             <h1 className="text-primary text-3xl font-medium tracking-widest mb-3">
               Lizilib
@@ -15,10 +15,10 @@ const Register = () => {
           </div>
           <Steps step1 />
           <div className="flex flex-col items-center gap-8">
-            <h1 className="text-6xl text-tertiary font-medium">
+            <h1 className="text-6xl text-secondary font-medium">
               Comencemos<span className="text-primary">.</span>
             </h1>
-            <span className="text-tertiary font-medium mb-2">
+            <span className="text-secondary font-medium mb-2">
               ¿Ya eres usuario?{" "}
               <a href="#" className="text-primary hover:underline">
                 Ingresa
@@ -30,42 +30,42 @@ const Register = () => {
               <div className="flex justify-center mb-2">
                 <input
                   type="text"
-                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-tertiary"
+                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-secondary"
                   placeholder="Nombre completo"
                 />
               </div>
               <div className="flex justify-center mb-2">
                 <input
                   type="text"
-                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-tertiary"
+                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-secondary"
                   placeholder="Rut"
                 />
               </div>
               <div className="flex justify-center mb-2">
                 <input
                   type="email"
-                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-tertiary"
+                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-secondary"
                   placeholder="Correo electrónico"
                 />
               </div>
               <div className="flex justify-center mb-2">
                 <input
                   type="text"
-                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-tertiary"
+                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-secondary"
                   placeholder="Telefono"
                 />
               </div>
               <div className="flex justify-center mb-2">
                 <input
                   type="password"
-                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-tertiary"
+                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-secondary"
                   placeholder="Contraseña"
                 />
               </div>
               <div className="flex justify-center mb-2">
                 <input
                   type="password"
-                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-tertiary"
+                  className="w-full max-w-sm py-2 px-4 rounded-lg outline-none border border-secondary"
                   placeholder="Repetir contraseña"
                 />
               </div>
@@ -78,7 +78,7 @@ const Register = () => {
                 <Link to="/register/2">
                   <button
                     type="submit"
-                    className="w-full bg-primary py-2 px-4 rounded-lg text-white hover:bg-tertiary transition-all duration-500"
+                    className="w-full bg-primary py-2 px-4 rounded-lg text-white hover:bg-secondary transition-all duration-500"
                   >
                     Siguiente
                   </button>

@@ -12,7 +12,7 @@ const Steps = ({ step1, step2, step3 }) => {
                 <span className="h-6 w-6 rounded-full bg-primary text-secondary text-center text-[10px]/6 font-bold">
                   1
                 </span>
-                <span className="hidden sm:block text-tertiary">
+                <span className="hidden sm:block text-secondary">
                   {" "}
                   Información personal{" "}
                 </span>
@@ -35,7 +35,7 @@ const Steps = ({ step1, step2, step3 }) => {
                 <span className="h-6 w-6 rounded-full bg-primary text-center text-[10px]/6 font-bold text-secondary">
                   2
                 </span>
-                <span className="hidden sm:block text-tertiary">
+                <span className="hidden sm:block text-secondary">
                   {" "}
                   Información empresarial{" "}
                 </span>
@@ -59,7 +59,7 @@ const Steps = ({ step1, step2, step3 }) => {
                 <span className="h-6 w-6 rounded-full bg-primary text-secondary text-center text-[10px]/6 font-bold">
                   3
                 </span>
-                <span className="hidden sm:block text-tertiary">
+                <span className="hidden sm:block text-secondary">
                   {" "}
                   Personalización{" "}
                 </span>
