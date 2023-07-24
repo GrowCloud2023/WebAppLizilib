@@ -9,10 +9,10 @@ const Steps = ({ step1, step2, step3 }) => {
           {step1 ? (
             <Link to="/register">
               <li className="flex items-center gap-2 p-2">
-                <span className="h-6 w-6 rounded-full bg-primary text-secondary text-center text-[10px]/6 font-bold">
+                <span className="h-6 w-6 rounded-full bg-primary text-tertiary text-center text-[10px]/6 font-bold">
                   1
                 </span>
-                <span className="hidden sm:block text-secondary">
+                <span className="hidden sm:block text-tertiary">
                   {" "}
                   Información personal{" "}
                 </span>
@@ -23,7 +23,7 @@ const Steps = ({ step1, step2, step3 }) => {
               <span className="h-6 w-6 rounded-full bg-gray-200 text-center text-[10px]/6 font-bold">
                 1
               </span>
-              <span className="hidden sm:block text-tertiary">
+              <span className="hidden sm:block text-gray-300">
                 {" "}
                 Información personal{" "}
               </span>
@@ -32,10 +32,10 @@ const Steps = ({ step1, step2, step3 }) => {
           {step2 ? (
             <Link to="/register/2">
               <li className="flex items-center gap-2 p-2">
-                <span className="h-6 w-6 rounded-full bg-primary text-center text-[10px]/6 font-bold text-secondary">
+                <span className="h-6 w-6 rounded-full bg-primary text-center text-[10px]/6 font-bold text-tertiary">
                   2
                 </span>
-                <span className="hidden sm:block text-secondary">
+                <span className="hidden sm:block text-tertiary">
                   {" "}
                   Información empresarial{" "}
                 </span>
@@ -46,7 +46,7 @@ const Steps = ({ step1, step2, step3 }) => {
               <span className="h-6 w-6 rounded-full bg-gray-200 text-center text-[10px]/6 font-bold">
                 2
               </span>
-              <span className="hidden sm:block text-tertiary">
+              <span className="hidden sm:block text-gray-300">
                 {" "}
                 Información empresarial{" "}
               </span>
@@ -56,10 +56,10 @@ const Steps = ({ step1, step2, step3 }) => {
           {step3 ? (
             <Link to="/register/3">
               <li className="flex items-center gap-2 p-2">
-                <span className="h-6 w-6 rounded-full bg-primary text-secondary text-center text-[10px]/6 font-bold">
+                <span className="h-6 w-6 rounded-full bg-primary text-tertiary text-center text-[10px]/6 font-bold">
                   3
                 </span>
-                <span className="hidden sm:block text-secondary">
+                <span className="hidden sm:block text-tertiary">
                   {" "}
                   Personalización{" "}
                 </span>
@@ -70,7 +70,7 @@ const Steps = ({ step1, step2, step3 }) => {
               <span className="h-6 w-6 rounded-full bg-gray-200 text-center text-[10px]/6 font-bold">
                 3
               </span>
-              <span className="hidden sm:block text-tertiary">
+              <span className="hidden sm:block text-gray-300">
                 {" "}
                 Personalización{" "}
               </span>

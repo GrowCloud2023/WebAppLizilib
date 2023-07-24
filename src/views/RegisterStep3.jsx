@@ -14,14 +14,14 @@ const RegisterStep3 = () => {
         </div>
         <Steps step3 />
         <div className="flex flex-col items-center gap-8 mb-8">
-          <h1 className="text-6xl text-secondary font-medium">
+          <h1 className="text-6xl text-tertiary font-medium">
             Comencemos<span className="text-primary">.</span>
           </h1>
         </div>
         <div className="w-full mb-2">
           <form>
             <div className="mb-4 lg:mx-8 sm:mx-20 mx-3">
-              <span className="text-gray-200 font-medium">
+              <span className="text-tertiary font-medium">
                 Cuéntanos sobre los rubros de tu interés, esto nos ayudará a
                 brindarte las licitaciones más personalizadas
               </span>
@@ -57,7 +57,7 @@ const RegisterStep3 = () => {
               <Link to="/">
                 <button
                   type="submit"
-                  className="w-full bg-primary py-2 px-4 rounded-lg text-secondary hover:bg-secondary transition-all duration-500"
+                  className="w-full bg-primary py-2 px-4 rounded-lg text-secondary hover:bg-tertiary transition-all duration-500"
                 >
                   Finalizar
                 </button>

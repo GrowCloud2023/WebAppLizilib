@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { BsEnvelope, BsLock } from "react-icons/bs";
 import { Auth } from "aws-amplify";
 import { toast } from "sonner";
+import LoginForm from "../components/LoginForm";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const Login = () => {
       navigate("/dashboard");
       setTimeout(() => {
         toast.success("Bienvenido :)!");
-      }, 1000);
+      }, 4000);
     } catch (error) {
       console.log("Error al iniciar sesión:", error);
       toast.error("Oh:(, ha ocurrido un error al iniciar sesión", error);
@@ -29,7 +29,9 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="max-w-lg">
         <div className="flex justify-center mb-8">
-          <h1 className="text-6xl font-bold text-primary">LIZILIB</h1>
+          <Link to="/">
+            <h1 className="text-6xl font-bold text-primary">LIZILIB</h1>
+          </Link>
         </div>
         <h1 className="text-3xl text-gray-900 mb-8 flex justify-center">
           Inicia sesión en tu cuenta
@@ -40,45 +42,7 @@ const Login = () => {
               Introduce tu dirección de correo electrónico de trabajo
             </p>
           </div>
-          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-            <div className="relative">
-              <input
-                type="email"
-                className="w-full border py-2 px-10 rounded-md outline-none"
-                placeholder="Ingresa tu correo"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <BsEnvelope className="w-5 h-5 absolute left-2 top-[50%] -translate-y-[50%] text-primary" />
-            </div>
-            <div className="relative">
-              <input
-                type="password"
-                className="w-full border py-2 px-10 rounded-md outline-none"
-                placeholder="Ingresa tu contraseña"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <BsLock className="w-5 h-5 absolute left-2 top-[50%] -translate-y-[50%] text-primary" />
-            </div>
-            <div>
-              <button
-                type="submit"
-                className="w-full bg-primary py-2 px-4 text-white rounded-md hover:bg-green-600 transition-all duration-500"
-              >
-                Iniciar sesión
-              </button>
-            </div>
-            <span className="flex items-center justify-center gap-2">
-              ¿Olvidaste tu contraseña?{" "}
-              <a
-                href="#"
-                className="text-primary hover:text-green-600  transition-all duration-500"
-              >
-                Recuperar
-              </a>
-            </span>
-          </form>
+          <LoginForm handleSubmit={handleSubmit} />
         </div>
 
         <div className="my-10">

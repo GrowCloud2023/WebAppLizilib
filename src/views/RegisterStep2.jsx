@@ -14,7 +14,7 @@ const RegisterStep2 = () => {
         </div>
         <Steps step2 />
         <div className="flex flex-col items-center gap-8 mb-8">
-          <h1 className="text-6xl text-secondary font-medium">
+          <h1 className="text-6xl text-tertiary font-medium">
             Comencemos<span className="text-primary">.</span>
           </h1>
         </div>
