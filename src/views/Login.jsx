@@ -1,8 +1,25 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { BsEnvelope, BsLock } from "react-icons/bs";
+import { Auth } from "aws-amplify";
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await Auth.signIn(email, password);
+      console.log("auth res", res);
+      navigate("/dashboard");
+    } catch (error) {
+      console.log("Error al iniciar sesión:", error);
+    }
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="max-w-lg">
@@ -18,12 +35,14 @@ const Login = () => {
               Introduce tu dirección de correo electrónico de trabajo
             </p>
           </div>
-          <form className="flex flex-col gap-4">
+          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
             <div className="relative">
               <input
                 type="email"
                 className="w-full border py-2 px-10 rounded-md outline-none"
                 placeholder="Ingresa tu correo"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
               <BsEnvelope className="w-5 h-5 absolute left-2 top-[50%] -translate-y-[50%] text-primary" />
             </div>
@@ -32,18 +51,18 @@ const Login = () => {
                 type="password"
                 className="w-full border py-2 px-10 rounded-md outline-none"
                 placeholder="Ingresa tu contraseña"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
               <BsLock className="w-5 h-5 absolute left-2 top-[50%] -translate-y-[50%] text-primary" />
             </div>
             <div>
-              <Link to="/">
-                <button
-                  type="submit"
-                  className="w-full bg-primary py-2 px-4 text-white rounded-md hover:bg-green-600 transition-all duration-500"
-                >
-                  Iniciar sesión
-                </button>
-              </Link>
+              <button
+                type="submit"
+                className="w-full bg-primary py-2 px-4 text-white rounded-md hover:bg-green-600 transition-all duration-500"
+              >
+                Iniciar sesión
+              </button>
             </div>
             <span className="flex items-center justify-center gap-2">
               ¿Olvidaste tu contraseña?{" "}
