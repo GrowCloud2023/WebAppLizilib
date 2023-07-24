@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { BsEnvelope, BsLock } from "react-icons/bs";
 import { Auth } from "aws-amplify";
+import { toast } from "sonner";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -13,10 +14,11 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await Auth.signIn(email, password);
-      console.log("auth res", res);
+      toast.success("Bienvenido :)!");
       navigate("/dashboard");
     } catch (error) {
       console.log("Error al iniciar sesión:", error);
+      toast.error("Oh:(, ha ocurrido un error al iniciar sesión", error);
     }
   };
 
