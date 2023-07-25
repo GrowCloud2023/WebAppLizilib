@@ -2,9 +2,14 @@ import { forwardRef } from "react";
 import { AiFillCreditCard } from "react-icons/ai";
 import { BiSolidUser } from "react-icons/bi";
 import { Link, useLocation } from "react-router-dom";
+import useModalStore from "../../store/modalStore";
+import ModalLayout from "../../layouts/ModalLayout";
+import Home from "../../views/Home";
 
-const SideBar = forwardRef(({ showNav }, ref) => {
+const SideBar = forwardRef(({}, ref) => {
   const location = useLocation();
+
+  const toggleModal = useModalStore((state) => state.toggleModal);
 
   const activeRoute = (routeName) => {
     return location.pathname.includes(routeName);
@@ -69,9 +74,16 @@ const SideBar = forwardRef(({ showNav }, ref) => {
           </Link>
         </div>
         <div className="pl-6 py-3 mx-5 rounded text-center mb-3 flex-col mt-[100%] transition-all duration-500">
-          <button className="text-white bg-primary focus:ring-4 focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 hover:bg-green-600 transition-all duration-500">
+          <button
+            onClick={toggleModal}
+            className="text-white bg-primary focus:ring-4 focus:ring-primary font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 hover:bg-green-600 transition-all duration-500"
+          >
             ¡Danos tú opinión!
           </button>
+          <ModalLayout
+            title={"Saber tu opinión nos importa"}
+            children={"AQUÍ VA EL FORMULARIO"}
+          />
         </div>
       </div>
     </div>

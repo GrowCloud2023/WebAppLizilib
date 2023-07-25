@@ -4,7 +4,6 @@ import { Auth } from "aws-amplify";
 import { toast } from "sonner";
 import { BsEnvelope, BsLock } from "react-icons/bs";
 
-
 const Login = () => {
   const navigate = useNavigate();
 
@@ -61,14 +60,12 @@ const Login = () => {
               <BsLock className="w-5 h-5 absolute left-2 top-[50%] -translate-y-[50%] text-primary" />
             </div>
             <div>
-              <Link to="/">
-                <button
-                  type="submit"
-                  className="w-full bg-primary py-2 px-4 text-white rounded-md hover:bg-green-600 transition-all duration-500"
-                >
-                  Iniciar sesión
-                </button>
-              </Link>
+              <button
+                type="submit"
+                className="w-full bg-primary py-2 px-4 text-white rounded-md hover:bg-green-600 transition-all duration-500"
+              >
+                Iniciar sesión
+              </button>
             </div>
             <span className="flex items-center justify-center gap-2">
               ¿Olvidaste tu contraseña?{" "}
