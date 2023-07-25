@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Auth } from "aws-amplify";
 import { toast } from "sonner";
+import { BsEnvelope, BsLock } from "react-icons/bs";
+
 
 const Login = () => {
   const navigate = useNavigate();
